@@ -1,0 +1,39 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.5, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Lenovo\Documents\L6_L7_44_scholarship_awards\venv\Scripts\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+rootdir: C:\Users\Lenovo\Documents\L6_L7_44_scholarship_awards
+configfile: pytest.ini
+plugins: hypothesis-6.170.15
+collecting ... collected 28 items
+
+BranchCoverageTest_44_application.py::test_award_amount_decision_branches[merit-70-low-False-0] PASSED [  3%]
+BranchCoverageTest_44_application.py::test_award_amount_decision_branches[merit-70-low-True-0] PASSED [  7%]
+BranchCoverageTest_44_application.py::test_award_amount_decision_branches[sports-60-high-True-0] PASSED [ 10%]
+BranchCoverageTest_44_application.py::test_award_amount_decision_branches[merit-76-low-False-100] PASSED [ 14%]
+BranchCoverageTest_44_application.py::test_award_amount_decision_branches[merit-76-high-False-60] PASSED [ 17%]
+BranchCoverageTest_44_application.py::test_award_amount_decision_branches[merit-91-low-False-2560] PASSED [ 21%]
+BranchCoverageTest_44_application.py::test_award_amount_decision_branches[merit-91-high-False-1600] PASSED [ 25%]
+BranchCoverageTest_44_application.py::test_award_amount_decision_branches[arts-65-low-False-0] PASSED [ 28%]
+BranchCoverageTest_44_application.py::test_award_amount_decision_branches[arts-66-low-False-100] PASSED [ 32%]
+BranchCoverageTest_44_application.py::test_eligibility_decision_branches[90-2-True-True] PASSED [ 35%]
+BranchCoverageTest_44_application.py::test_eligibility_decision_branches[0-3-True-False] PASSED [ 39%]
+BranchCoverageTest_44_application.py::test_eligibility_decision_branches[74-0-False-False] PASSED [ 42%]
+BranchCoverageTest_44_application.py::test_eligibility_decision_branches[75-0-False-True] PASSED [ 46%]
+BranchCoverageTest_44_application.py::test_eligibility_decision_branches[75-1-False-True] PASSED [ 50%]
+BranchCoverageTest_44_application.py::test_eligibility_decision_branches[75-2-False-False] PASSED [ 53%]
+BranchCoverageTest_44_application.py::test_status_decision_branches[20-False-False-open] PASSED [ 57%]
+BranchCoverageTest_44_application.py::test_status_decision_branches[19-False-False-closing] PASSED [ 60%]
+BranchCoverageTest_44_application.py::test_status_decision_branches[4-False-False-closed] PASSED [ 64%]
+BranchCoverageTest_44_application.py::test_status_decision_branches[30-True-False-open] PASSED [ 67%]
+BranchCoverageTest_44_application.py::test_status_decision_branches[29-True-False-closing] PASSED [ 71%]
+BranchCoverageTest_44_application.py::test_status_decision_branches[14-True-False-closed] PASSED [ 75%]
+BranchCoverageTest_44_application.py::test_status_decision_branches[30-False-True-open] PASSED [ 78%]
+BranchCoverageTest_44_application.py::test_status_decision_branches[29-False-True-closing] PASSED [ 82%]
+BranchCoverageTest_44_application.py::test_status_decision_branches[14-False-True-closed] PASSED [ 85%]
+BranchCoverageTest_44_application.py::test_status_decision_branches[40-True-True-open] PASSED [ 89%]
+BranchCoverageTest_44_application.py::test_award_amount_validation_branches[arguments0-unknown category] PASSED [ 92%]
+BranchCoverageTest_44_application.py::test_award_amount_validation_branches[arguments1-invalid marks] PASSED [ 96%]
+BranchCoverageTest_44_application.py::test_sports_renewal_short_circuits_category_comparison PASSED [100%]
+
+============================= 28 passed in 0.82s ==============================
