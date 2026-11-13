@@ -13,7 +13,7 @@ This repository contains two Python labs using the scholarship-awards example. L
 | `Lab 7/scholarship_awards.py` | Hardened Lab 7 application and interactive demo |
 | `Lab 7/test_scholarship_awards.py` | Hypothesis fuzz tests and valid examples |
 | `submission/lab6/reports/` | Coverage data, command logs, and HTML reports |
-| `submission/lab6/screenshots/` | Screenshot checklist |
+| `submission/lab6/screenshots/` | Supplied terminal captures and screenshot notes |
 | `submission/lab7/reports/` | Initial failures, original source, and final run logs |
 | `submission/lab7/screenshots/` | Screenshot checklist |
 | `submission/FINAL_LAB_REPORT.md` | Methodology, defects, and verified results |
@@ -106,7 +106,7 @@ Malformed textual values raise `ValueError`; non-string inputs raise `TypeError`
 
 ## Reports and screenshots
 
-Coverage logs and HTML reports are in `submission/lab6/reports/`. Initial and final Lab 7 execution logs and the original source are in `submission/lab7/reports/`. Screenshot folders contain commands and a checklist. Terminal screenshots were not generated; capture them locally from a terminal using those checklists. No screenshot or result was fabricated.
+Coverage logs and HTML reports are in `submission/lab6/reports/`. Initial and final Lab 7 execution logs and the original source are in `submission/lab7/reports/`. Five supplied terminal captures are stored in `submission/lab6/screenshots/` and described in its README. The screenshot set does not include a completed dedicated Lab 6 line-coverage test run; the authentic test log is available in the reports folder.
 
 ## Submission checklist
 
@@ -117,4 +117,4 @@ Coverage logs and HTML reports are in `submission/lab6/reports/`. Initial and fi
 - [x] Lab 7 validation fixes and expected behavior documented.
 - [x] Root requirements, README, final lab report, and execution logs included.
 - [x] Three local commits created in order: line coverage, branch coverage, Lab 7.
-- [ ] Terminal screenshots: capture manually using the supplied checklists.
+- [x] Supplied screenshots included and described; dedicated line-coverage execution screenshot remains outstanding.

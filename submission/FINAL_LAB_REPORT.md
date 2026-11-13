@@ -1,5 +1,9 @@
 # Final Lab Report: Code Coverage and Hypothesis Fuzz Testing
 
+**Student:** Mutturaj Angadi
+
+**SRN:** PES1UG24AM439
+
 ## Introduction
 
 The repository contains Lab 6 and Lab 7 implementations of scholarship-award functionality. The supplied handouts require separate measurement of line and branch coverage in Lab 6 and Hypothesis-based input fuzzing followed by fixes in Lab 7. This report records the actual functions, observed failures, remediation, and measured results in the assigned Windows repository.
@@ -72,7 +76,7 @@ The full test run and standalone Lab 7 run are recorded in `submission/lab7/repo
 
 ## Screenshots and limitations
 
-The requested terminal screenshot views are listed in the two screenshot checklists. No screenshot image was created in this run because the available Windows computer-use instructions prohibit automating terminal applications. Actual command output is preserved in text logs; screenshot images must be captured manually. No test result or screenshot is fabricated.
+Five supplied terminal screenshots are preserved in `submission/lab6/screenshots/`: full-suite test output, the successful Lab 7 interactive demo, a line-coverage report with the start of the branch command, and a branch-coverage report. The standalone line-coverage test execution is not shown in this screenshot set; its actual terminal output is in `submission/lab6/reports/code_coverage_execution.txt`. The separate branch test execution output is in `branch_coverage_execution.txt`. No screenshot or result was fabricated.
 
 ## Conclusion
 
