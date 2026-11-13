@@ -1,0 +1,39 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.5, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Lenovo\Documents\L6_L7_44_scholarship_awards\venv\Scripts\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+rootdir: C:\Users\Lenovo\Documents\L6_L7_44_scholarship_awards
+configfile: pytest.ini
+plugins: hypothesis-6.170.15
+collecting ... collected 28 items
+
+CodeCoverageTest_44_application.py::test_award_amount_categories_rates_and_cutoffs[merit-74-low-False-0] PASSED [  3%]
+CodeCoverageTest_44_application.py::test_award_amount_categories_rates_and_cutoffs[merit-75-low-False-0] PASSED [  7%]
+CodeCoverageTest_44_application.py::test_award_amount_categories_rates_and_cutoffs[merit-76-low-False-100] PASSED [ 10%]
+CodeCoverageTest_44_application.py::test_award_amount_categories_rates_and_cutoffs[sports-61-high-False-60] PASSED [ 14%]
+CodeCoverageTest_44_application.py::test_award_amount_categories_rates_and_cutoffs[arts-61-low-True-100] PASSED [ 17%]
+CodeCoverageTest_44_application.py::test_award_amount_categories_rates_and_cutoffs[merit-96-low-False-3360] PASSED [ 21%]
+CodeCoverageTest_44_application.py::test_award_amount_categories_rates_and_cutoffs[merit-96-high-False-2100] PASSED [ 25%]
+CodeCoverageTest_44_application.py::test_award_amount_categories_rates_and_cutoffs[sports-80-low-True-3200] PASSED [ 28%]
+CodeCoverageTest_44_application.py::test_award_amount_rejects_invalid_category_and_negative_marks[unknown-90-low-False-unknown category] PASSED [ 32%]
+CodeCoverageTest_44_application.py::test_award_amount_rejects_invalid_category_and_negative_marks[merit--1-low-False-invalid marks] PASSED [ 35%]
+CodeCoverageTest_44_application.py::test_is_eligible_paths[74-0-False-False] PASSED [ 39%]
+CodeCoverageTest_44_application.py::test_is_eligible_paths[75-0-False-True] PASSED [ 42%]
+CodeCoverageTest_44_application.py::test_is_eligible_paths[100-1-False-True] PASSED [ 46%]
+CodeCoverageTest_44_application.py::test_is_eligible_paths[100-2-False-False] PASSED [ 50%]
+CodeCoverageTest_44_application.py::test_is_eligible_paths[0-2-True-True] PASSED [ 53%]
+CodeCoverageTest_44_application.py::test_is_eligible_paths[100-3-True-False] PASSED [ 57%]
+CodeCoverageTest_44_application.py::test_application_status_boundaries[20-False-False-open] PASSED [ 60%]
+CodeCoverageTest_44_application.py::test_application_status_boundaries[19-False-False-closing] PASSED [ 64%]
+CodeCoverageTest_44_application.py::test_application_status_boundaries[4-False-False-closed] PASSED [ 67%]
+CodeCoverageTest_44_application.py::test_application_status_boundaries[30-True-False-open] PASSED [ 71%]
+CodeCoverageTest_44_application.py::test_application_status_boundaries[29-True-False-closing] PASSED [ 75%]
+CodeCoverageTest_44_application.py::test_application_status_boundaries[14-True-False-closed] PASSED [ 78%]
+CodeCoverageTest_44_application.py::test_application_status_boundaries[30-False-True-open] PASSED [ 82%]
+CodeCoverageTest_44_application.py::test_application_status_boundaries[29-False-True-closing] PASSED [ 85%]
+CodeCoverageTest_44_application.py::test_application_status_boundaries[14-False-True-closed] PASSED [ 89%]
+CodeCoverageTest_44_application.py::test_application_status_boundaries[40-True-True-open] PASSED [ 92%]
+CodeCoverageTest_44_application.py::test_award_amount_wrong_marks_type_raises_type_error PASSED [ 96%]
+CodeCoverageTest_44_application.py::test_eligibility_wrong_attendance_type_raises_type_error PASSED [100%]
+
+============================= 28 passed in 0.52s ==============================

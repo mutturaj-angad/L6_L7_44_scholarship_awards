@@ -1,18 +1,11 @@
-# L6_L7_44 — Scholarship Awards
+# Lab 6: Code and Branch Coverage
 
-Lab 6: Code and Branch Coverage
+The Lab 6 application is `scholarship_awards.py`; it calculates award amounts, determines eligibility, and reports application status.
 
-## About
+The coverage suites are deliberately separate:
 
-A small Python module that works out scholarship award amounts by category, marks, income level and renewal, checks applicant eligibility and reports application status.
+- `CodeCoverageTest_44_application.py` measures line coverage.
+- `BranchCoverageTest_44_application.py` measures decision outcomes with coverage.py's branch instrumentation.
+- `test_scholarship_awards.py` retains two original deterministic examples.
 
-## Files
-
-| File | Description |
-|------|-------------|
-| `scholarship_awards.py` | The module under test |
-| `test_scholarship_awards.py` | Starter test file |
-
-Keep all your Lab 6 work in this `LAB6` folder. Lab 7 will be added to this repo later.
-
-Refer to the lab handout for instructions.
+Run each suite from this folder. Use a separate `COVERAGE_FILE` for each report so the measurements stay independent and any existing `.coverage` file is preserved. Commands and HTML output paths appear in the repository root README. Current verified result is 100% line and 100% branch coverage; each dedicated suite passes 28 tests.

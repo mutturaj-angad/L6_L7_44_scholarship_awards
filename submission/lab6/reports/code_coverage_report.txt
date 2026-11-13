@@ -1,0 +1,6 @@
+Name                                 Stmts   Miss  Cover   Missing
+------------------------------------------------------------------
+CodeCoverageTest_44_application.py      31      0   100%
+scholarship_awards.py                   37      0   100%
+------------------------------------------------------------------
+TOTAL                                   68      0   100%
