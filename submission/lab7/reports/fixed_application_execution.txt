@@ -1,0 +1,8 @@
+==== Running parse_applicant ====
+Enter category:marks (e.g. merit:82): Category and Marks: ('Merit', 82.0)
+
+==== Running marks_average ====
+Enter marks as CSV (e.g. 72,85,90): Average Marks: 82
+
+==== Running payable_award ====
+Enter award|deduction (e.g. 5000|500): Payable Award: 5400.0

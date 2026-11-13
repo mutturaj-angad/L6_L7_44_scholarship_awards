@@ -1,0 +1,311 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.5, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Lenovo\Documents\L6_L7_44_scholarship_awards\venv\Scripts\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+rootdir: C:\Users\Lenovo
+plugins: hypothesis-6.170.15
+collecting ... collected 24 items
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_valid_records_are_normalized PASSED [  4%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_wrong_delimiter_count PASSED [  8%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_unknown_categories FAILED [ 12%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_bad_or_out_of_range_marks PASSED [ 16%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_mark_boundaries[-1] FAILED [ 20%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_mark_boundaries[101] FAILED [ 25%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_mark_boundaries[nan] FAILED [ 29%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_mark_boundaries[inf] FAILED [ 33%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_mark_boundaries[] PASSED [ 37%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_accepts_long_surrounding_whitespace PASSED [ 41%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_non_text_values FAILED [ 45%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_marks_average_matches_floor_average_and_preserves_duplicates PASSED [ 50%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_marks_average_rejects_empty_or_non_integer_entries PASSED [ 54%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_marks_average_rejects_marks_above_100 FAILED [ 58%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_marks_average_rejects_negative_marks FAILED [ 62%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_marks_average_rejects_non_text_values FAILED [ 66%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_payable_award_applies_multiplier_and_zero_floor PASSED [ 70%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_payable_award_rejects_wrong_delimiter_count PASSED [ 75%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_payable_award_rejects_non_text_values FAILED [ 79%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_payable_award_rejects_invalid_award_values FAILED [ 83%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_payable_award_rejects_invalid_deductions FAILED [ 87%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_payable_award_rejects_finite_amount_that_overflows_result FAILED [ 91%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_nested_collections_are_rejected_as_applicant_records FAILED [ 95%]
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_examples_from_application_readme PASSED [100%]
+
+================================== FAILURES ===================================
+_______________ test_parse_applicant_rejects_unknown_categories _______________
+
+    @given(st.text().filter(lambda category: category.strip().casefold() not in {"merit", "sports", "arts"}), MARK)
+>   def test_parse_applicant_rejects_unknown_categories(category, marks):
+                   ^^^
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:51:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+category = '', marks = 0
+
+    @given(st.text().filter(lambda category: category.strip().casefold() not in {"merit", "sports", "arts"}), MARK)
+    def test_parse_applicant_rejects_unknown_categories(category, marks):
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+E       Failing test case: test_parse_applicant_rejects_unknown_categories(
+E           category='',
+E           marks=0,  # or any other generated value
+E       )
+E       Explanation:
+E           These lines were always and only run by failing test cases:
+E               C:\Users\Lenovo\AppData\Local\Temp\L6L7_lab7_baseline\scholarship_awards.py:3
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:52: Failed
+______________ test_parse_applicant_rejects_mark_boundaries[-1] _______________
+
+marks = '-1'
+
+    @pytest.mark.parametrize("marks", ("-1", "101", "nan", "inf", ""))
+    def test_parse_applicant_rejects_mark_boundaries(marks):
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:64: Failed
+______________ test_parse_applicant_rejects_mark_boundaries[101] ______________
+
+marks = '101'
+
+    @pytest.mark.parametrize("marks", ("-1", "101", "nan", "inf", ""))
+    def test_parse_applicant_rejects_mark_boundaries(marks):
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:64: Failed
+______________ test_parse_applicant_rejects_mark_boundaries[nan] ______________
+
+marks = 'nan'
+
+    @pytest.mark.parametrize("marks", ("-1", "101", "nan", "inf", ""))
+    def test_parse_applicant_rejects_mark_boundaries(marks):
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:64: Failed
+______________ test_parse_applicant_rejects_mark_boundaries[inf] ______________
+
+marks = 'inf'
+
+    @pytest.mark.parametrize("marks", ("-1", "101", "nan", "inf", ""))
+    def test_parse_applicant_rejects_mark_boundaries(marks):
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:64: Failed
+________________ test_parse_applicant_rejects_non_text_values _________________
+
+    @given(st.one_of(st.none(), st.integers(), st.booleans(), st.lists(st.text()), st.dictionaries(st.text(), st.integers())))
+>   def test_parse_applicant_rejects_non_text_values(value):
+                   ^^^
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:76:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:78: in test_parse_applicant_rejects_non_text_values
+    parse_applicant(value)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = None
+
+    def parse_applicant(text):
+>       category, marks = text.split(':')
+                          ^^^^^^^^^^
+E       AttributeError: 'NoneType' object has no attribute 'split'
+E       Failing test case: test_parse_applicant_rejects_non_text_values(
+E           value=None,  # or any other generated value
+E       )
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\scholarship_awards.py:2: AttributeError
+_________________ test_marks_average_rejects_marks_above_100 __________________
+
+    @given(st.lists(st.integers(min_value=101), min_size=1, max_size=20))
+>   def test_marks_average_rejects_marks_above_100(marks):
+                   ^^^
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:95:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+marks = [101]
+
+    @given(st.lists(st.integers(min_value=101), min_size=1, max_size=20))
+    def test_marks_average_rejects_marks_above_100(marks):
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+E       Failing test case: test_marks_average_rejects_marks_above_100(
+E           marks=[101],  # or any other generated value
+E       )
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:96: Failed
+__________________ test_marks_average_rejects_negative_marks __________________
+
+    @given(st.lists(st.integers(max_value=-1), min_size=1, max_size=20))
+>   def test_marks_average_rejects_negative_marks(marks):
+                   ^^^
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:101:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+marks = [-1]
+
+    @given(st.lists(st.integers(max_value=-1), min_size=1, max_size=20))
+    def test_marks_average_rejects_negative_marks(marks):
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+E       Failing test case: test_marks_average_rejects_negative_marks(
+E           marks=[-1],  # or any other generated value
+E       )
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:102: Failed
+_________________ test_marks_average_rejects_non_text_values __________________
+
+    @given(st.one_of(st.none(), st.integers(), st.booleans(), st.lists(st.integers())))
+>   def test_marks_average_rejects_non_text_values(value):
+                   ^^^
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:107:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:109: in test_marks_average_rejects_non_text_values
+    marks_average(value)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+marks_csv = None
+
+    def marks_average(marks_csv):
+>       values = [int(r) for r in marks_csv.split(',')]
+                                  ^^^^^^^^^^^^^^^
+E       AttributeError: 'NoneType' object has no attribute 'split'
+E       Failing test case: test_marks_average_rejects_non_text_values(
+E           value=None,  # or any other generated value
+E       )
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\scholarship_awards.py:6: AttributeError
+_________________ test_payable_award_rejects_non_text_values __________________
+
+    @given(st.one_of(st.none(), st.integers(), st.booleans(), st.lists(st.text())))
+>   def test_payable_award_rejects_non_text_values(value):
+                   ^^^
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:124:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:126: in test_payable_award_rejects_non_text_values
+    payable_award(value)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = None
+
+    def payable_award(text):
+>       award, deduction = text.split('|')
+                           ^^^^^^^^^^
+E       AttributeError: 'NoneType' object has no attribute 'split'
+E       Failing test case: test_payable_award_rejects_non_text_values(
+E           value=None,  # or any other generated value
+E       )
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\scholarship_awards.py:10: AttributeError
+_______________ test_payable_award_rejects_invalid_award_values _______________
+
+    @given(st.sampled_from(("nan", "inf", "-inf", "-1", "1e309", "", "abc")), st.text())
+>   def test_payable_award_rejects_invalid_award_values(award, deduction):
+                   ^^^
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:130:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+award = 'nan', deduction = '0'
+
+    @given(st.sampled_from(("nan", "inf", "-inf", "-1", "1e309", "", "abc")), st.text())
+    def test_payable_award_rejects_invalid_award_values(award, deduction):
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+E       Failing test case: test_payable_award_rejects_invalid_award_values(
+E           award='nan',
+E           deduction='0',
+E       )
+E       Explanation:
+E           These lines were always and only run by failing test cases:
+E               C:\Users\Lenovo\AppData\Local\Temp\L6L7_lab7_baseline\scholarship_awards.py:12
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:131: Failed
+________________ test_payable_award_rejects_invalid_deductions ________________
+
+    @given(st.integers(min_value=0, max_value=10**9), st.sampled_from(("nan", "inf", "-inf", "-1", "", "abc")))
+>   def test_payable_award_rejects_invalid_deductions(award, deduction):
+                   ^^^
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:136:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+award = 0, deduction = 'nan'
+
+    @given(st.integers(min_value=0, max_value=10**9), st.sampled_from(("nan", "inf", "-inf", "-1", "", "abc")))
+    def test_payable_award_rejects_invalid_deductions(award, deduction):
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+E       Failing test case: test_payable_award_rejects_invalid_deductions(
+E           award=0,  # or any other generated value
+E           deduction='nan',
+E       )
+E       Explanation:
+E           These lines were always and only run by failing test cases:
+E               C:\Users\Lenovo\AppData\Local\Temp\L6L7_lab7_baseline\scholarship_awards.py:12
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:137: Failed
+_______ test_payable_award_rejects_finite_amount_that_overflows_result ________
+
+    def test_payable_award_rejects_finite_amount_that_overflows_result():
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:142: Failed
+__________ test_nested_collections_are_rejected_as_applicant_records __________
+
+    @given(st.lists(st.lists(st.one_of(st.none(), st.integers(), st.text()), max_size=5), max_size=5))
+>   def test_nested_collections_are_rejected_as_applicant_records(value):
+                   ^^^
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:147:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py:149: in test_nested_collections_are_rejected_as_applicant_records
+    parse_applicant(value)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = []
+
+    def parse_applicant(text):
+>       category, marks = text.split(':')
+                          ^^^^^^^^^^
+E       AttributeError: 'list' object has no attribute 'split'
+E       Failing test case: test_nested_collections_are_rejected_as_applicant_records(
+E           value=[],  # or any other generated value
+E       )
+
+..\..\AppData\Local\Temp\L6L7_lab7_baseline\scholarship_awards.py:2: AttributeError
+=========================== short test summary info ===========================
+FAILED ..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_unknown_categories
+FAILED ..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_mark_boundaries[-1]
+FAILED ..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_mark_boundaries[101]
+FAILED ..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_mark_boundaries[nan]
+FAILED ..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_mark_boundaries[inf]
+FAILED ..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_parse_applicant_rejects_non_text_values
+FAILED ..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_marks_average_rejects_marks_above_100
+FAILED ..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_marks_average_rejects_negative_marks
+FAILED ..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_marks_average_rejects_non_text_values
+FAILED ..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_payable_award_rejects_non_text_values
+FAILED ..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_payable_award_rejects_invalid_award_values
+FAILED ..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_payable_award_rejects_invalid_deductions
+FAILED ..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_payable_award_rejects_finite_amount_that_overflows_result
+FAILED ..\..\AppData\Local\Temp\L6L7_lab7_baseline\test_scholarship_awards.py::test_nested_collections_are_rejected_as_applicant_records
+======================== 14 failed, 10 passed in 2.34s ========================

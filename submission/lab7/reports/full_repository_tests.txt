@@ -1,0 +1,37 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.5, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Lenovo\Documents\L6_L7_44_scholarship_awards\venv\Scripts\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+rootdir: C:\Users\Lenovo\Documents\L6_L7_44_scholarship_awards
+configfile: pytest.ini
+plugins: hypothesis-6.170.15
+collecting ... collected 26 items
+
+Lab 6/test_scholarship_awards.py::test_below_cutoff_marks PASSED         [  3%]
+Lab 6/test_scholarship_awards.py::test_is_eligible PASSED                [  7%]
+Lab 7/test_scholarship_awards.py::test_parse_applicant_valid_records_are_normalized PASSED [ 11%]
+Lab 7/test_scholarship_awards.py::test_parse_applicant_rejects_wrong_delimiter_count PASSED [ 15%]
+Lab 7/test_scholarship_awards.py::test_parse_applicant_rejects_unknown_categories PASSED [ 19%]
+Lab 7/test_scholarship_awards.py::test_parse_applicant_rejects_bad_or_out_of_range_marks PASSED [ 23%]
+Lab 7/test_scholarship_awards.py::test_parse_applicant_rejects_mark_boundaries[-1] PASSED [ 26%]
+Lab 7/test_scholarship_awards.py::test_parse_applicant_rejects_mark_boundaries[101] PASSED [ 30%]
+Lab 7/test_scholarship_awards.py::test_parse_applicant_rejects_mark_boundaries[nan] PASSED [ 34%]
+Lab 7/test_scholarship_awards.py::test_parse_applicant_rejects_mark_boundaries[inf] PASSED [ 38%]
+Lab 7/test_scholarship_awards.py::test_parse_applicant_rejects_mark_boundaries[] PASSED [ 42%]
+Lab 7/test_scholarship_awards.py::test_parse_applicant_accepts_long_surrounding_whitespace PASSED [ 46%]
+Lab 7/test_scholarship_awards.py::test_parse_applicant_rejects_non_text_values PASSED [ 50%]
+Lab 7/test_scholarship_awards.py::test_marks_average_matches_floor_average_and_preserves_duplicates PASSED [ 53%]
+Lab 7/test_scholarship_awards.py::test_marks_average_rejects_empty_or_non_integer_entries PASSED [ 57%]
+Lab 7/test_scholarship_awards.py::test_marks_average_rejects_marks_above_100 PASSED [ 61%]
+Lab 7/test_scholarship_awards.py::test_marks_average_rejects_negative_marks PASSED [ 65%]
+Lab 7/test_scholarship_awards.py::test_marks_average_rejects_non_text_values PASSED [ 69%]
+Lab 7/test_scholarship_awards.py::test_payable_award_applies_multiplier_and_zero_floor PASSED [ 73%]
+Lab 7/test_scholarship_awards.py::test_payable_award_rejects_wrong_delimiter_count PASSED [ 76%]
+Lab 7/test_scholarship_awards.py::test_payable_award_rejects_non_text_values PASSED [ 80%]
+Lab 7/test_scholarship_awards.py::test_payable_award_rejects_invalid_award_values PASSED [ 84%]
+Lab 7/test_scholarship_awards.py::test_payable_award_rejects_invalid_deductions PASSED [ 88%]
+Lab 7/test_scholarship_awards.py::test_payable_award_rejects_finite_amount_that_overflows_result PASSED [ 92%]
+Lab 7/test_scholarship_awards.py::test_nested_collections_are_rejected_as_applicant_records PASSED [ 96%]
+Lab 7/test_scholarship_awards.py::test_examples_from_application_readme PASSED [100%]
+
+============================= 26 passed in 0.83s ==============================
